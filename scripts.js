@@ -2,10 +2,9 @@ var list = document.getElementById('list'),
     add = document.getElementById('addElem');
 
 add.addEventListener('click', function() {
-    var itemCount = document.getElementsByTagName('li'),
-        itemNumber = itemCount.length,
+    var existingLiElements = document.getElementsByTagName('li'),
         element = document.createElement('li');
 
-    element.innerHTML = 'item ' + itemNumber;
+    element.innerHTML = 'item ' + existingLiElements.length;
     list.appendChild(element);
-    });
+});
